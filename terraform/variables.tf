@@ -96,3 +96,6 @@ variable "flask_app_home" {
   description = "APP HOME variable"
   default = "/usr/src/app/"
 }
+variable "health_check_path" {
+  default = "/"
+}
