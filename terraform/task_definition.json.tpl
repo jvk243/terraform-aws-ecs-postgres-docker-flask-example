@@ -10,6 +10,14 @@
             "protocol":"tcp"
          }
       ],
+      "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-group": "${CLOUDWATCH_GROUP}",
+            "awslogs-region": "${REGION}",
+            "awslogs-stream-prefix": "ecs"
+          }
+        },
       "environment":[
          {
             "name":"POSTGRES_USER",

@@ -11,6 +11,8 @@ data "template_file" "task_definition_template" {
     FLASK_APP_HOME = var.flask_app_home
     FLASK_APP_PORT = var.flask_app_port
     APP_SECRET_KEY = replace(random_string.flask-secret-key.result,"\"","")
+    REGION = var.region
+    CLOUDWATCH_GROUP = aws_cloudwatch_log_group.logs.name
 
   }
 }

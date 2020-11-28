@@ -96,6 +96,18 @@ variable "flask_app_home" {
   description = "APP HOME variable"
   default = "/usr/src/app/"
 }
+variable "ecs_task_definition_name" {
+  description = "Task definition name."
+  type = string
+  default = "flask-app"
+}
+
+variable "cloudwatch_group" {
+  description = "CloudWatch group name."
+  type = string
+  default = "flask-app"
+}
 variable "health_check_path" {
-  default = "/"
+  description = "Http path for task health check"
+  default     = "/health"
 }
